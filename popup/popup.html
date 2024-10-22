@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Medieval Apple's Browser Tweaks</h1>
+
+    <div id="" class="tabs">
+        <button id="youtube_tab" class="tab active">Youtube</button>
+        <button id="useragent_tab" class="tab">User-Agent</button>
+        <button id="other_tab" class="tab">Other</button>
+        <button id="settings_tab" class="tab">Settings</button>
+    </div>
+
+    <div class="youtube_tab settings">
+        Force Youtube TV Mode (Bugs) <input id="youtube_tv" type="checkbox"> <br>
+        Auto Youtube Ad Skipper <input id="youtube_skip" type="checkbox"> <br>
+        Remove Youtube Banner Ads <input id="youtube_ads" type="checkbox"> <br>
+        Remove Youtube Video Watermarks <input id="youtube_watermark" type="checkbox"> <br>
+        Youtube Scrub Bar Color:
+        <input id="scrub_left" type="color" value="#ff0033">
+        <input id="scrub_right" type="color" value="#ff2791">
+        <input id="scrub" type="color" value="#ff0033"> <br>
+        <label for="style">Youtube Caption Styles</label>
+        <select name="style" id="caption_style">
+            <option value="1">Disabled</option>
+            <option value="2">Sleek</option>
+        </select><br>
+        <label for="logo">Animated Youtube Logo</label>
+        <select name="logo" id="youtube_logo">
+            <option value="1">Disabled</option>
+            <option value="2">Minecraft</option>
+            <option value="3">Minecraft 1 Trillion Views</option>
+            <option value="4">Amazeballs</option>
+            <option value="5">Creators Get Animated</option>
+        </select> <br>
+        <label for="res">Youtube Default Res</label>
+        <select name="res" id="youtube_res">
+            <option value="2160">2160p</option>
+            <option value="1440">1440p</option>
+            <option value="1080">1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+            <option value="360">360p</option>
+            <option value="240">240p</option>
+            <option value="144">144p</option>
+        </select> <br>
+        Youtube Default Volume <input id="youtube_vol" type="input" value="100">
+    </div>
+
+    <div class="useragent_tab settings" hidden>
+        <label for="agent">User-Agent Switcher</label>
+        <select name="agent" id="u_agent">
+            <option value="1">Disabled</option>
+            <option value="2">Chrome (Win10)</option>
+            <option value="3">Firefox (Ubuntu)</option>
+            <option value="4">Chrome OS</option>
+            <option value="5">Edge (Xbox One)</option>
+        </select>
+    </div>
+
+    <div class="other_tab settings" hidden>
+        Remove Ads on Wordle <input id="wordle_ads" type="checkbox"> <br>
+        Scramble Words on Webpage <input id="scramble" type="checkbox"> <br>
+        Force Amazon Prime HD (Bugs) <input id="amazon" type="checkbox"> <br>
+        Remove Gemini Overviews <input id="gemini" type="checkbox"> <br>
+        <!-- Dark Theme Google Docs (Not Working) <input id="docs_dark" type="checkbox"> <br> -->
+        <!-- Png Highlighter (Not Working) <input id="png_high" type="checkbox"> <br> <br> -->
+    </div>
+
+    <div class="settings_tab settings" hidden>
+        Not Sure What To Put Here Yet
+    </div>
+
+    <button id="apply">Apply Settings</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play&display=swap');
+
+body {
+    font-size: small;
+    background-color: rgb(43, 43, 43);
+    font-family: 'Cairo Play', sans-serif;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #bb141f;
+    border: none;
+    color: white;
+    font-family: 'Cairo Play', sans-serif;
+    margin-top: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #bb2832;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    background-color: #2e2e2e;
+    border: none;
+    color: white;
+    font-family: 'Cairo Play', sans-serif;
+    margin-top: 0px;
+    padding: 8px 12px;
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: #bb141f;
+}
+
+.settings {
+    font-size: 150%;
+    font-weight: bold;
+}
