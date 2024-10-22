@@ -3,6 +3,12 @@
     "version": "1.0",
     "manifest_version": 3,
     "description": "Small Improvments To The Internet",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "contact@medievalapple.net",
+            "strict_min_version": "131.0"
+        }
+    },
     "icons": {
         "128": "icons/icon.png"
     },
@@ -12,24 +18,32 @@
     "content_scripts": [
         {
             "matches": [
-              "<all_urls>"
+                "<all_urls>"
             ],
-            "js": ["content-scripts/content.js"]
+            "js": [
+                "content-scripts/content.js"
+            ]
         }
     ],
     "web_accessible_resources": [
         {
-        "resources": ["images/*.webp"],
-        "matches": ["<all_urls>"]
+            "resources": [
+                "images/*.webp"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
         }
     ],
     "background": {
-        "scripts": ["background/background.js"],
+        "scripts": [
+            "background/background.js"
+        ],
         "type": "module"
-      },
+    },
     "permissions": [
         "storage",
         "webRequest",
         "webRequestBlocking"
-      ]
+    ]
 }
