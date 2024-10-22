@@ -79,7 +79,9 @@ function YoutubeMutations() {
                     }
                 }
                 if (mutation.type === "childList" && settings.youtube_watermark) {
-                    document.getElementsByClassName("annotation annotation-type-custom iv-branding")[0].remove()
+                    if(document.getElementsByClassName("annotation annotation-type-custom iv-branding").length > 0){
+                        document.getElementsByClassName("annotation annotation-type-custom iv-branding")[0].remove()
+                    }
                 }
                 for (let i = 0; i < document.getElementsByClassName("ytp-play-progress").length; i++) {
                     const bar = document.getElementsByClassName("ytp-play-progress")[i];
@@ -97,7 +99,9 @@ function YoutubeMutations() {
             const youtubeAd = new MutationObserver((mutationList, observer) => {
                 for (const mutation of mutationList) {
                     if (mutation.type === "childList") {
-                        document.getElementById("player-ads").remove()
+                        if(document.getElementById("player-ads") != null){
+                            document.getElementById("player-ads").remove()
+                        }
                         for (let i = 0; i < document.getElementsByTagName("ytd-ad-slot-renderer").length; i++) {
                             const ad = document.getElementsByTagName("ytd-ad-slot-renderer")[i];
                             if (ad.parentElement.parentElement.tagName == "YTD-RICH-ITEM-RENDERER") {
